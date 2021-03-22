@@ -9,7 +9,18 @@
         function fnJoin() {
             var uID = document.getElementById("userID").value;
             var endValue = confirm("아이디 " + uID + "로 가입하시겠습니까?");
-            alert("endValue : " + endValue);
+
+            if (endValue) {    // 조건식
+                location.href="https://www.naver.com";
+            } else {
+                alert("사용자가 취소하였습니다.");
+            }
+            // 회원가입을 실제 진행할거라면 => 회원가입html파일로 이동
+            //                                           (네이버로 이동하는 것으로 대체함)
+            // 회원가입을 실제 진행하지 않을거라면 => 현재 페이지에 그대로 있음
+
+            console.log("콘솔 로그 출력위치 확인!");
+
         }
 
     </script>
