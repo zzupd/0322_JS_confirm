@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 기초</title>
+
+    <script>
+
+        function fnJoin() {  // 실행대기상태로 함수가 호출되어야만 실행됨
+
+            var uID = document.getElementById("userID").value;
+            var joinYN = confirm("입력하신 아이디 " + uID + "를 사용하여 가입하시겠습니까?");
+            /*alert("joinYN : " + joinYN);*/
+
+            /*if 를 사용한 분기용 코드 => if 선택문*/
+
+            if (joinYN == true) {     /*변수명 true 일 때*/
+                location.href = "https://www.naver.com";
+            } else {
+                alert("사용자가 취소하셨습니다!");
+                /*변수가 false 일 때 JS가 실행하는 코드*/
+            }
+
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+   <h1 id="sample">회원가입</h1>
+   아이디 <input type="text" id="userID">
+   <br>...
+   <br>
+   <button type="button" onclick="fnJoin()">회원가입</button>
+</body>
+</html>
